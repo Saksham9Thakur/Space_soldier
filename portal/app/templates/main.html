@@ -1,0 +1,28 @@
+<html>
+<head>
+    <title>EasyComment Sample</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=9">
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>
+    <script type="text/javascript" src="./easy-comment/jquery.easy-comment.min.js"></script>
+    <script type="text/javascript">
+    jQuery(document).ready(function(){
+    // Your other javascript code if any
+
+    $("#id_of_your_comment_container").EasyComment({
+      path:"/lab/easy-comment/", //Change it to the folder where you put the easycomment files
+      moderate:false,
+      maxReply:5
+    });
+    // Your other javascript code if any
+    });
+    </script>
+  <style type="text/css">.ec-comment-pane{position:relative; padding-left:20px; margin:5px 0; overflow:auto}.ec-comment-pane div.ec-total{font:1.3em Georgia; height:24px; line-height:24px}.ec-comment-pane div.ec-paging{height:30px; line-height:30px;text-align:right;}.ec-comment-pane div.ec-paging>button{font:13px arial;height:30px; line-height:30px;margin-right:10px;}.ec-comment-pane ul.ec-comment-list{position:relative; font-family:'Lucida Grande',sans-serif; font-size:14px; line-height:16px; list-style-type:none; pad style="width:200px;height:ding:0px; background-color:#FFF; border:0px solid #14a1cc; border-radius:12px; overflow:auto}.ec-comment-pane ul.ec-comment-list li.ec-comment{position:relative; min-height:48px; min-width:48px; padding:4px 4px 12px 56px; margin-bottom:8px; border-radius:4px; font-size:9pt arial}.ec-comment-pane ul.ec-comment-list li.ec-comment:last-child{border:none; padding-bottom:0px}.ec-comment-pane ul.ec-comment-list li.ec-comment button{font:11px arial}.ec-comment-pane ul.ec-comment-list li.ec-comment a, .ec-comment-pane ul.ec-comment-list li.ec-comment .author{font-weight:bold; color:#2276bb; text-decoration:none}.ec-comment-pane ul.ec-comment-list li.ec-comment a:hover{text-decoration:underline}.ec-comment-pane ul.ec-comment-list li.ec-comment div.avatar{position:absolute; top:0px; left:0px; width:48px; height:48px; border:none; margin-top:6px; margin-left:2px; border-radius:4px; text-overflow:ellipsis; background:url(/lab/easy-comment/ec-comment.png)}.ec-comment-pane ul.ec-comment-list li.ec-comment span.user-name{font-weight:bold; margin-right:0.5em; text-overflow:ellipsis}.ec-comment-pane ul.ec-comment-list li.ec-comment span.comment-time{font-size:11px; color:#999; line-height:16px; text-overflow:ellipsis}.ec-comment-form{font:1em Georgia}.ec-comment-form form{margin:0; padding:0}.ec-comment-form form input, .ec-comment-form form textarea, .ec-comment-form form button{font:1em arial}.ec-comment-form fieldset{ background:-webkit-gradient(linear,0 0,0 bottom,from(#ffffff),to(#dddddd));  background:-moz-linear-gradient(#ffffff,#dddddd);  background:linear-gradient(#ffffff,#dddddd);  filter :progid:DXImageTransform.Microsoft.Gradient(GradientType=0,startColorstr=#ffffff,endColorstr=#dddddd)}.ec-comment-form fieldset legend{ background:-webkit-gradient(linear,0 0,0 bottom,from(#ffffff),to(#dddddd));  background:-moz-linear-gradient(#ffffff,#dddddd);  background:linear-gradient(#ffffff,#dddddd);  filter :progid:DXImageTransform.Microsoft.Gradient(GradientType=0,startColorstr=#ffffff,endColorstr=#dddddd);  padding:0px 5px;  border-radius:6px;  border:1px solid #ccc}.ec-comment-form .title{ color:#444;  line-height:30px}.ec-comment-form fieldset{ border-radius:6px}.ec-comment-form fieldset fieldset{ border:none;  background:none;  filter:none}.ec-comment-form fieldset fieldset legend{ background:none;  border:none;  filter:none}.ec-comment-reply-form{position:absolute; left:0px; top:0px; height:400px}.ec-comment-reply-form div.close_button{ position:absolute;  right:-18px; top:-18px;  width:36px; height:36px;  background:url(/lab/easy-comment/ec-close_box.png) no-repeat;  cursor:pointer}</style></head>
+  <body>
+  <img src="{{ url_for('static', filename='1.jpg')}}" style="width:200px;height:150px;position:relative;left:550px;"> 
+    <center>
+<h1>It is an {{a}}<h1>
+    <h1>Comment Section<h1>
+    <div id="id_of_your_comment_container" style="width:800px;height:800px;" class="ec-comment-pane"><ul class="ec-comment-list"><li class="ec-comment" id="1493530247-18558475">   <div class="avatar"></div>   </li></ul><div class="ec-comment-form">
+    <form method="post" name="ec-comment-form" style="width: 500px;"><fieldset><legend class="title">Leave your comment here</legend><fieldset><legend>Comment:<span title="Required field" style="color:red;margin-right:5px;">*</span></legend><div style="vertical-align:top;"><textarea style="width:100%;height:180px;" name="message" type="text"></textarea></div></fieldset><div style="text-align:right;position:relative;"><button name="submit">Submit</button>&nbsp;&nbsp;&nbsp;</div></fieldset></form></div></div></center>
+  
+ <div class="ec-comment-form ec-comment-reply-form" style="display:none;"><div class="close_button"></div><form method="post" name="ec-comment-reply-form" style="width: 500px;"><fieldset><fieldset><legend>Your name:<span title="Required field" style="color:red;">*</span></legend><input type="text" style="width:100%" value="" name="name"></fieldset><fieldset><legend>Comment:<span title="Required field" style="color:red;margin-right:5px;">*</span></legend><div style="vertical-align:top;"><textarea style="width:100%;height:180px;" name="message" type="text"></textarea></div></fieldset><div style="text-align:right;position:relative;"><button name="submit_reply">Reply</button>&nbsp;&nbsp;&nbsp;<button class="close_button">Close</button>&nbsp;&nbsp;&nbsp;</div></fieldset></form></div></body></html>

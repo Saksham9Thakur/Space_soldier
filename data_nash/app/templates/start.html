@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>
+SEARCH
+</title>
+</head>
+<script>
+function de(w)
+{	
+/*alert("asd");*/	
+document.getElementById("ma").innerHTML =w;
+}
+/* document.addEventListener("DOMContentLoaded", de('silver'));*/
+</script>
+<body onload="de('{{m}}');" style="background-color:#333; position:relative;top:10%;">
+<form action="{{url_for('he')}}" method="POST" style="position:relative;left:46%;">
+<input type="submit" value="PUSH">
+</form>
+<h1 id="ma" style="color:white;font-family: Verdana, sans-serif;position:relative;left:575px;top:40px;"></h1>
+{%for i in ap%}
+<p style="position:relative;left:45%;color:white;top:50px;font-family: "Times New Roman", Times, serif;">{{i}}</p>
+{%endfor%}
+</div>
+</body>
+</html>
